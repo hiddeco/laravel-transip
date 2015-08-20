@@ -1,5 +1,11 @@
 Laravel TransIP
 ===============
+[![Build Status](https://scrutinizer-ci.com/g/hiddeco/laravel-transip/badges/build.png?b=master)](https://scrutinizer-ci.com/g/hiddeco/laravel-transip/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiddeco/laravel-transip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiddeco/laravel-transip/?branch=master)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![StyleCI](https://styleci.io/repos/41059403/shield)](https://styleci.io/repos/41059403)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e/mini.png)](https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e)
+
 Laravel TransIP provides a bridge between the [TransIP package](https://github.com/hiddeco/transip) and Laravel 5.
 
 ## Installation
