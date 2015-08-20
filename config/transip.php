@@ -36,9 +36,9 @@ return [
             'username'      => 'transip-username',
             'private_key'   => 'transip-private-key',
             'mode'          => 'readwrite', // default: readonly
-            'endpoint'      => 'api.transip.eu' // default: api.transip.nl
+            'endpoint'      => 'api.transip.eu', // default: api.transip.nl
         ],
 
-    ]
+    ],
 
 ];
