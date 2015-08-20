@@ -1,0 +1,42 @@
+{
+  "name": "hiddeco/laravel-transip",
+  "description": "Laravel TransIP is a bridge for the TransIP SOAP client and Laravel 5.",
+  "keywords": ["laravel", "framework", "transip", "api", "soap", "bridge"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hidde Beydals",
+      "email": "hello@hidde.co",
+      "homepage": "https://github.com/hiddeco"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "HiddeCo\\LaravelTransIP\\": "src/"
+    }
+  },
+  "require": {
+    "illuminate/contracts": "5.0.*|5.1.*",
+    "illuminate/support": "5.0.*|5.1.*",
+    "graham-campbell/manager": "~2.2",
+    "hiddeco/transip": "0.1"
+  },
+  "require-dev": {
+    "graham-campbell/testbench": "~3.0",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HiddeCo\\Tests\\LaravelTransIP\\": "tests/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
