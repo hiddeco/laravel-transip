@@ -26,7 +26,7 @@ class TransIPFactoryTest extends AbstractTestBenchTestCase
 
         $return = $factory->create([
             'username'      => 'transip-username',
-            'private_key'   => 'transip-private-key'
+            'private_key'   => 'transip-private-key',
         ]);
 
         $this->assertInstanceOf(Client::class, $return);
@@ -40,7 +40,7 @@ class TransIPFactoryTest extends AbstractTestBenchTestCase
             'username'      => 'transip-username',
             'private_key'   => 'transip-private-key',
             'mode'          => 'readwrite',
-            'endpoint'      => 'api.transip.co.uk'
+            'endpoint'      => 'api.transip.co.uk',
         ]);
 
         $this->assertInstanceOf(Client::class, $return);
@@ -55,7 +55,7 @@ class TransIPFactoryTest extends AbstractTestBenchTestCase
         $factory = $this->getTransIPFactory();
         $factory->create([
             'mode'      => 'readwrite',
-            'endpoint'  => 'api.transip.co.uk'
+            'endpoint'  => 'api.transip.co.uk',
         ]);
     }
 
