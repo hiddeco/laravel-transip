@@ -19,7 +19,7 @@ To use this package without running into trouble you will need PHP 5.5+ or HHVM 
 3.	Register the Laravel HTTP Adapter service provider in `config/app.php` by adding 
 	`'HiddeCo\LaravelTransIP\TransIPServiceProvider::class'` to the providers key
 
-4.	Add the `TransIP` facade to the aliases key: `'TransIP' => HiddeCo\LaravelTransIP\Facades\TransIP::class
+4.	Add the `TransIP` facade to the aliases key: `'TransIP' => HiddeCo\LaravelTransIP\Facades\TransIP::class`
 
 ## Configuration
 To manage your TransIP connections run the `php artisan vendor:publish` command, this will create the `config/transip.php`
