@@ -16,8 +16,8 @@
     }
   },
   "require": {
-    "illuminate/contracts": "5.0.*|5.1.*",
-    "illuminate/support": "5.0.*|5.1.*",
+    "illuminate/contracts": "5.0.*|5.1.*|5.2.*",
+    "illuminate/support": "5.0.*|5.1.*|5.2.*",
     "graham-campbell/manager": "~2.2",
     "hiddeco/transip": "0.1"
   },
