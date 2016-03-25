@@ -13,7 +13,7 @@ namespace HiddeCo\Tests\LaravelTransIP;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use HiddeCo\LaravelTransIP\TransIPFactory;
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

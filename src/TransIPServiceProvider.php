@@ -11,7 +11,7 @@
 
 namespace HiddeCo\LaravelTransIP;
 
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 

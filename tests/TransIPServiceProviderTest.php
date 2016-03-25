@@ -14,7 +14,7 @@ namespace HiddeCo\Tests\LaravelTransIP;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 use HiddeCo\LaravelTransIP\TransIPFactory;
 use HiddeCo\LaravelTransIP\TransIPManager;
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
