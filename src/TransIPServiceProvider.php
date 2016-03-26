@@ -11,9 +11,9 @@
 
 namespace HiddeCo\LaravelTransIP;
 
-use TransIP\Client;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

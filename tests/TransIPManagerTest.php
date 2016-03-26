@@ -14,9 +14,9 @@ namespace HiddeCo\Tests\LaravelTransIP;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use HiddeCo\LaravelTransIP\TransIPFactory;
 use HiddeCo\LaravelTransIP\TransIPManager;
-use TransIP\Client;
 use Illuminate\Contracts\Config\Repository;
 use Mockery;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
