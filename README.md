@@ -6,17 +6,17 @@ Laravel TransIP
 [![StyleCI](https://styleci.io/repos/41059403/shield)](https://styleci.io/repos/41059403)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e/mini.png)](https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e)
 
-Laravel TransIP provides a bridge between the [TransIP package](https://github.com/hiddeco/transip) and Laravel 5.
+Laravel TransIP provides a bridge between the [TransIP package](https://github.com/hiddeco/transip) and Laravel 5.*.
 
 ## Installation
 To use this package without running into trouble you will need PHP 5.5+ or HHVM 3.6+, and Composer.
 
-1.	Get the latest version of Laravel HTTP Adapter, add the following line to your composer.json file
-	`"hiddeco/laravel-transip": "0.1"`
+1.	Get the latest version of Laravel TransIP, add the following line to your composer.json file
+	`"hiddeco/laravel-transip": "5.2"`
 
 2.	Run `composer update` or `composer install`
 
-3.	Register the Laravel HTTP Adapter service provider in `config/app.php` by adding 
+3.	Register the Laravel TransIP service provider in `config/app.php` by adding
 	`'TransIP\Laravel\TransIPServiceProvider::class'` to the providers key
 
 4.	Add the `TransIP` facade to the aliases key: `'TransIP' => TransIP\Laravel\Facades\TransIP::class`
