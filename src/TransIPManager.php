@@ -9,29 +9,29 @@
  * file that was distributed with this source code.
  */
 
-namespace HiddeCo\LaravelTransIP;
+namespace TransIP\Laravel;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
 /**
- * @method \HiddeCo\TransIP\Api\Colocation colocation()
- * @method \HiddeCo\TransIP\Api\Colocation colocation_service()
- * @method \HiddeCo\TransIP\Api\Colocation colocationService()
- * @method \HiddeCo\TransIP\Api\Domain     domain()
- * @method \HiddeCo\TransIP\Api\Domain     domain_service()
- * @method \HiddeCo\TransIP\Api\Domain     domainService()
- * @method \HiddeCo\TransIP\Api\Forward    forward()
- * @method \HiddeCo\TransIP\Api\Forward    forward_service()
- * @method \HiddeCo\TransIP\Api\Forward    forwardService()
- * @method \HiddeCo\TransIP\Api\Vps        vps()
- * @method \HiddeCo\TransIP\Api\Vps        vps_service()
- * @method \HiddeCo\TransIP\Api\Vps        vpsService()
- * @method \HiddeCo\TransIP\Api\WebHosting hosting()
- * @method \HiddeCo\TransIP\Api\WebHosting web_hosting()
- * @method \HiddeCo\TransIP\Api\WebHosting webHosting()
- * @method \HiddeCo\TransIP\Api\WebHosting web_hosting_service()
- * @method \HiddeCo\TransIP\Api\WebHosting webHostingService()
+ * @method \TransIP\Api\Colocation colocation()
+ * @method \TransIP\Api\Colocation colocation_service()
+ * @method \TransIP\Api\Colocation colocationService()
+ * @method \TransIP\Api\Domain     domain()
+ * @method \TransIP\Api\Domain     domain_service()
+ * @method \TransIP\Api\Domain     domainService()
+ * @method \TransIP\Api\Forward    forward()
+ * @method \TransIP\Api\Forward    forward_service()
+ * @method \TransIP\Api\Forward    forwardService()
+ * @method \TransIP\Api\Vps        vps()
+ * @method \TransIP\Api\Vps        vps_service()
+ * @method \TransIP\Api\Vps        vpsService()
+ * @method \TransIP\Api\WebHosting hosting()
+ * @method \TransIP\Api\WebHosting web_hosting()
+ * @method \TransIP\Api\WebHosting webHosting()
+ * @method \TransIP\Api\WebHosting web_hosting_service()
+ * @method \TransIP\Api\WebHosting webHostingService()
  *
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -40,7 +40,7 @@ class TransIPManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \HiddeCo\LaravelTransIP\TransIPFactory
+     * @var \TransIP\Laravel\TransIPFactory
      */
     protected $factory;
 
@@ -48,7 +48,7 @@ class TransIPManager extends AbstractManager
      * Create a new TransIP manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \HiddeCo\LaravelTransIP\TransIPFactory  $factory
+     * @param \TransIP\Laravel\TransIPFactory  $factory
      */
     public function __construct(Repository $config, TransIPFactory $factory)
     {
@@ -81,7 +81,7 @@ class TransIPManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \HiddeCo\LaravelTransIP\TransIPFactory
+     * @return \TransIP\Laravel\TransIPFactory
      */
     public function getFactory()
     {

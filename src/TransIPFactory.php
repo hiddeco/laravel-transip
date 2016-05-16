@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace HiddeCo\LaravelTransIP;
+namespace TransIP\Laravel;
 
-use HiddeCo\TransIP\Client;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
@@ -55,7 +55,7 @@ class TransIPFactory
      *
      * @param string[] $config
      *
-     * @return \HiddeCo\TransIP\Client
+     * @return \TransIP\Client
      */
     protected function getClient(array $config)
     {

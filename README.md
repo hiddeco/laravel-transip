@@ -17,9 +17,9 @@ To use this package without running into trouble you will need PHP 5.5+ or HHVM 
 2.	Run `composer update` or `composer install`
 
 3.	Register the Laravel HTTP Adapter service provider in `config/app.php` by adding 
-	`'HiddeCo\LaravelTransIP\TransIPServiceProvider::class'` to the providers key
+	`'TransIP\Laravel\TransIPServiceProvider::class'` to the providers key
 
-4.	Add the `TransIP` facade to the aliases key: `'TransIP' => HiddeCo\LaravelTransIP\Facades\TransIP::class`
+4.	Add the `TransIP` facade to the aliases key: `'TransIP' => TransIP\Laravel\Facades\TransIP::class`
 
 ## Configuration
 To manage your TransIP connections run the `php artisan vendor:publish` command, this will create the `config/transip.php`
@@ -62,7 +62,7 @@ will work without any further settings.
 **Using the Facade**
 
 ````php
-use HiddeCo\LaravelTransIP\Facades\TransIP;
+use TransIP\Laravel\Facades\TransIP;
 
 $domainNames = TransIP::domain()->getDomainNames();
 // and you're done
@@ -74,7 +74,7 @@ The `TransIPManager` returns an instance of `\HiddeCo\TransIP\Client` and will b
 you want to call a specific connection, you can use the `connection` method:
 
 ````php
-use HiddeCo\LaravelTransIP\Facades\TransIP;
+use TransIP\Laravel\Facades\TransIP;
 
 $domainNames = TransIP::connection('alternative')->domain()->getDomainNames();
 ````
@@ -82,7 +82,7 @@ $domainNames = TransIP::connection('alternative')->domain()->getDomainNames();
 Changing the default connection and further explanations:
 
 ````php
-use HiddeCo\LaravelTransIP\Facades\TransIP;
+use TransIP\Laravel\Facades\TransIP;
 
 TransIP::connection('main')->domain()->getDomainNames();
 TransIP::domain()->getDomainNames();
@@ -101,7 +101,7 @@ TransIP::setDefaultConnection('alternative');
 Prefer the use of a dependency injection over facades? You can easily inject the manager:
 
 ````php
-use HiddeCo\LaravelTransIP\TransIPManager;
+use TransIP\Laravel\TransIPManager;
 
 class Foo
 {
