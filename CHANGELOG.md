@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.3 - 2016-05-16
+- `hiddeco/transip` version update `v5.2` -> `v5.3`
+
 ## 5.2 - 2016-05-16
 - Namespace change from `HiddeCo\LaravelTransIP` -> `TransIP\Laravel`
 - `graham-campbell/manager` dependency push from `v2.2` -> `v2.4`

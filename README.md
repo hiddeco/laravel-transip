@@ -12,7 +12,7 @@ Laravel TransIP provides a bridge between the [TransIP package](https://github.c
 To use this package without running into trouble you will need PHP 5.5+ or HHVM 3.6+, and Composer.
 
 1.	Get the latest version of Laravel TransIP, add the following line to your composer.json file
-	`"hiddeco/laravel-transip": "5.2"`
+	`"hiddeco/laravel-transip": "5.3"`
 
 2.	Run `composer update` or `composer install`
 
