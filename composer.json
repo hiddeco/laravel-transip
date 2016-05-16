@@ -16,14 +16,14 @@
   ],
   "autoload": {
     "psr-4": {
-      "HiddeCo\\LaravelTransIP\\": "src/"
+      "TransIP\\Laravel\\": "src/"
     }
   },
   "require": {
     "illuminate/contracts": "5.0.*|5.1.*|5.2.*",
     "illuminate/support": "5.0.*|5.1.*|5.2.*",
     "graham-campbell/manager": "~2.4",
-    "hiddeco/transip": "0.1"
+    "hiddeco/transip": "5.2"
   },
   "require-dev": {
     "graham-campbell/testbench": "~3.0",
@@ -32,7 +32,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "HiddeCo\\Tests\\LaravelTransIP\\": "tests/"
+      "TransIP\\Tests\\Laravel\\": "tests/"
     }
   },
   "config": {

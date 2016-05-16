@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace HiddeCo\Tests\LaravelTransIP;
+namespace TransIP\Tests\Laravel;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use HiddeCo\LaravelTransIP\TransIPFactory;
-use HiddeCo\LaravelTransIP\TransIPManager;
-use HiddeCo\TransIP\Client;
+use TransIP\Laravel\TransIPFactory;
+use TransIP\Laravel\TransIPManager;
+use TransIP\Client;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>

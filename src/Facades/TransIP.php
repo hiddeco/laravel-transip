@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace HiddeCo\LaravelTransIP\Facades;
+namespace TransIP\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace HiddeCo\Tests\LaravelTransIP\Facades;
+namespace TransIP\Tests\Laravel\Facades;
 
 use GrahamCampbell\TestBenchCore\FacadeTrait;
-use HiddeCo\LaravelTransIP\Facades\TransIP;
-use HiddeCo\LaravelTransIP\TransIPManager;
-use HiddeCo\Tests\LaravelTransIP\AbstractTestCase;
+use TransIP\Laravel\Facades\TransIP;
+use TransIP\Laravel\TransIPManager;
+use TransIP\Tests\Laravel\AbstractTestCase;
 
 /**
  * @author Hidde Beydals <hello@hidde.co>
