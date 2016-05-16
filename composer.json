@@ -8,6 +8,10 @@
       "name": "Hidde Beydals",
       "email": "hello@hidde.co",
       "homepage": "https://github.com/hiddeco"
+    },
+    {
+      "name": "TransIP Laravel Contributors",
+      "homepage": "https://github.com/hiddeco/laravel-transip/graphs/contributors"
     }
   ],
   "autoload": {
@@ -18,7 +22,7 @@
   "require": {
     "illuminate/contracts": "5.0.*|5.1.*|5.2.*",
     "illuminate/support": "5.0.*|5.1.*|5.2.*",
-    "graham-campbell/manager": "~2.2",
+    "graham-campbell/manager": "~2.4",
     "hiddeco/transip": "0.1"
   },
   "require-dev": {
