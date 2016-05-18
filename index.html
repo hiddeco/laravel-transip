@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Laravel-transip by hiddeco</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Laravel-transip</h1>
+        <p>Laravel TransIP is a bridge for the TransIP wrapper and Laravel 5.</p>
+
+        <p class="view"><a href="https://github.com/hiddeco/laravel-transip">View the Project on GitHub <small>hiddeco/laravel-transip</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hiddeco/laravel-transip/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hiddeco/laravel-transip/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hiddeco/laravel-transip">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="laravel-transip" class="anchor" href="#laravel-transip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Laravel TransIP</h1>
+
+<p><a href="https://scrutinizer-ci.com/g/hiddeco/laravel-transip/build-status/master"><img src="https://scrutinizer-ci.com/g/hiddeco/laravel-transip/badges/build.png?b=master" alt="Build Status"></a>
+<a href="https://scrutinizer-ci.com/g/hiddeco/laravel-transip/?branch=master"><img src="https://scrutinizer-ci.com/g/hiddeco/laravel-transip/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+<a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT license"></a>
+<a href="https://styleci.io/repos/41059403"><img src="https://styleci.io/repos/41059403/shield" alt="StyleCI"></a>
+<a href="https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e"><img src="https://insight.sensiolabs.com/projects/08fce49f-ae4c-4c8f-8667-bd297c7b708e/mini.png" alt="SensioLabsInsight"></a></p>
+
+<p>Laravel TransIP provides a bridge between the <a href="https://github.com/hiddeco/transip">TransIP package</a> and Laravel 5.*.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To use this package without running into trouble you will need PHP 5.5+ or HHVM 3.6+, and Composer.</p>
+
+<ol>
+<li><p>Get the latest version of Laravel TransIP, add the following line to your composer.json file
+<code>"hiddeco/laravel-transip": "5.3"</code></p></li>
+<li><p>Run <code>composer update</code> or <code>composer install</code></p></li>
+<li><p>Register the Laravel TransIP service provider in <code>config/app.php</code> by adding
+<code>'TransIP\Laravel\TransIPServiceProvider::class'</code> to the providers key</p></li>
+<li><p>Add the <code>TransIP</code> facade to the aliases key: <code>'TransIP' =&gt; TransIP\Laravel\Facades\TransIP::class</code></p></li>
+</ol>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>To manage your TransIP connections run the <code>php artisan vendor:publish</code> command, this will create the <code>config/transip.php</code>
+file where you can modify and manage your client connections.</p>
+
+<p>The following configuration options are available:</p>
+
+<p><strong>Default Connection Name</strong></p>
+
+<p>The TransIP connection name set here (<code>default</code>) is the default connection used for all API requests. However, you may 
+use as many connections as you need using the manager class. The default setting is <code>'main'</code>.</p>
+
+<p><strong>TransIP Connections</strong></p>
+
+<p>This is the place to configure your TransIP connections (<code>connections</code>). A default configuration with possible 
+options (except your API credentials) is already present and there is no limit to the amount of connections.</p>
+
+<p>Each connection has 2 required fields (<code>username</code> and <code>private_key</code>) and 2 optional fields (<code>mode</code> and <code>endpoint</code>).
+It is worth mentioning the <code>mode</code> field only accepts <code>readonly</code> and <code>readwrite</code> as values.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="transip-manager" class="anchor" href="#transip-manager" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TransIP Manager</h3>
+
+<p>The <code>TransIPManager</code> is where the magic happens. Bounded to the ioc container as <code>transip</code> and accessible by using the 
+<code>Facade\TransIP</code> facade. It uses parts of the <a href="https://github.com/GrahamCampbell/Laravel-Manager">Laravel Manager</a> 
+package to manage the TransIP client connections. For more information about the Manager you should check out the respective 
+<a href="https://github.com/GrahamCampbell/Laravel-Manager#usage">docs</a>. </p>
+
+<p>It is worth noting the connection returned will always be an instance of <code>\HiddeCo\TransIP\Client</code>. You 
+can find more information about this instance and its methods in the <a href="https://github.com/hiddeco/transip/blob/master/doc/">TransIP docs</a>.</p>
+
+<h3>
+<a id="transip-facade" class="anchor" href="#transip-facade" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TransIP Facade</h3>
+
+<p>The TransIP facade will pass static method calls to the <code>transip</code> object in the ioc container, which as stated 
+before is the <code>TransIPManager</code> class.</p>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
+
+<p>The usage of this package is fairly simple. Add your TransIP API credentials to the  <code>main</code> connection and the package 
+will work without any further settings.</p>
+
+<p><strong>Using the Facade</strong></p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">TransIP\Laravel\Facades\TransIP</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$domainNames</span> <span class="pl-k">=</span> <span class="pl-c1">TransIP</span><span class="pl-k">::</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1"><span class="pl-c">// and you're done</span></span></pre></div>
+
+<p><strong>Using the TransIP Manager</strong></p>
+
+<p>The <code>TransIPManager</code> returns an instance of <code>\HiddeCo\TransIP\Client</code> and will behave like it. If 
+you want to call a specific connection, you can use the <code>connection</code> method:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">TransIP\Laravel\Facades\TransIP</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$domainNames</span> <span class="pl-k">=</span> <span class="pl-c1">TransIP</span><span class="pl-k">::</span>connection(<span class="pl-s"><span class="pl-pds">'</span>alternative<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span></pre></div>
+
+<p>Changing the default connection and further explanations:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">TransIP\Laravel\Facades\TransIP</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">TransIP</span><span class="pl-k">::</span>connection(<span class="pl-s"><span class="pl-pds">'</span>main<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1"><span class="pl-c1">TransIP</span><span class="pl-k">::</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1"><span class="pl-c1">TransIP</span><span class="pl-k">::</span>connection()<span class="pl-k">-&gt;</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1"><span class="pl-c">// are all the same because </span></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">TransIP</span><span class="pl-k">::</span>getDefaultConnection();</span>
+<span class="pl-s1"><span class="pl-c">// returns 'main' as set in the configuration file</span></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">TransIP</span><span class="pl-k">::</span>setDefaultConnection(<span class="pl-s"><span class="pl-pds">'</span>alternative<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-c">// the 'alternative' connection is now the default connection</span></span></pre></div>
+
+<p><strong>Dependency Injection</strong></p>
+
+<p>Prefer the use of a dependency injection over facades? You can easily inject the manager:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">TransIP\Laravel\TransIPManager</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">class</span> <span class="pl-en">Foo</span></span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-k">protected</span> <span class="pl-smi">$transIP</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">public</span> <span class="pl-k">function</span> <span class="pl-c1">__construct</span>(<span class="pl-c1">TransIPManager</span> <span class="pl-smi">$transIP</span>)</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">        <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span><span class="pl-smi">transIP</span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">public</span> <span class="pl-k">function</span> <span class="pl-en">bar</span>()</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">        <span class="pl-smi">$this</span><span class="pl-k">-&gt;</span><span class="pl-smi">transIP</span><span class="pl-k">-&gt;</span>domain()<span class="pl-k">-&gt;</span>getDomainNames();</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">}</span></pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Laravel TransIP is licensed under <a href="https://github.com/hiddeco/laravel-transip/blob/master/LICENSE">The MIT License (MIT)</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hiddeco">hiddeco</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
