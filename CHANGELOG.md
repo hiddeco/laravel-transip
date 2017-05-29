@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.4 - 2017-05-29
+- Added Laravel 5.4 support
+- `hiddeco/transip` version update `v5.3` -> `v5.4`
+
 ## 5.3 - 2016-05-16
 - `hiddeco/transip` version update `v5.2` -> `v5.3`
 
