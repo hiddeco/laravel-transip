@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.5 - 2017-09-27
+- Added Laravel 5.5 support, including Package Auto-Discovery
+- `hiddeco/transip` version update `v5.3` -> `v5.5`
+- `graham-campbell/manager` version update `v2.4` -> `v3.0`
+
 ## 5.4 - 2017-05-29
 - Added Laravel 5.4 support
 - `hiddeco/transip` version update `v5.3` -> `v5.4`
