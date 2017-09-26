@@ -20,10 +20,10 @@
     }
   },
   "require": {
-    "illuminate/contracts": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
-    "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
-    "graham-campbell/manager": "~2.4",
-    "hiddeco/transip": "~5.4"
+    "illuminate/contracts": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+    "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+    "graham-campbell/manager": "~3.0",
+    "hiddeco/transip": "~5.5"
   },
   "require-dev": {
     "graham-campbell/testbench": "~3.0",
@@ -42,5 +42,15 @@
     "test": "phpunit"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TransIP\\Laravel\\TransIPServiceProvider"
+      ],
+      "aliases": {
+        "TransIP": "TransIP\\Laravel\\Facades\\TransIP"
+      }
+    }
+  }
 }
