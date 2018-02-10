@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.6 - 2018-02-10
+- Added Laravel 5.6 support
+- `hiddeco/transip` version update `v5.5` -> `v5.6`
+
 ## 5.5 - 2017-09-27
 - Added Laravel 5.5 support, including Package Auto-Discovery
 - `hiddeco/transip` version update `v5.3` -> `v5.5`
