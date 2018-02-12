@@ -32,6 +32,11 @@ use Illuminate\Contracts\Config\Repository;
  * @method \TransIP\Api\WebHosting webHosting()
  * @method \TransIP\Api\WebHosting web_hosting_service()
  * @method \TransIP\Api\WebHosting webHostingService()
+ * @method \TransIP\Api\Haip       haip()
+ * @method \TransIP\Api\Haip       ha_ip()
+ * @method \TransIP\Api\Haip       ha_ip_service()
+ * @method \TransIP\Api\Haip       haip_service()
+ * @method \TransIP\Api\Haip       haipService()
  *
  * @author Hidde Beydals <hello@hidde.co>
  */
@@ -61,7 +66,7 @@ class TransIPManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return \HiddeCo\TransIP\Client
+     * @return \TransIP\Client
      */
     protected function createConnection(array $config)
     {
