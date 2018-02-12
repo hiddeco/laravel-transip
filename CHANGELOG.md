@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 5.6.1 - 2018-02-12
+- Updated `graham-campbell/manager` to support Laravel 5.6
+- Updated PHPDoc to reflect new HA-IP methods in `hiddeco/transip`
+
 ## 5.6 - 2018-02-10
 - Added Laravel 5.6 support
 - `hiddeco/transip` version update `v5.5` -> `v5.6`

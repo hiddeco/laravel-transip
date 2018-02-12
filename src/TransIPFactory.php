@@ -23,7 +23,7 @@ class TransIPFactory
      *
      * @param array $config
      *
-     * @return \HiddeCo\TransIP\Client
+     * @return \TransIP\Client
      */
     public function create(array $config)
     {
